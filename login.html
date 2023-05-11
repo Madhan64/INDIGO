@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ak INDIA</title>
+  <link rel="icon" type="x-icon/image" href="images/Abishek_logo-removebg-preview.png">
+  <style>
+    body{
+      background-image:url("images/login.avif");
+      background-size:cover;
+    }
+    .theform{
+      text-align:left;
+      font-size:20px;
+      background-color: transparent;
+      border-color:aliceblue;
+      margin-top:20px;
+      width:400px;
+      border-radius:30px;
+      color:rgb(22, 129, 156);
+      padding:13px;
+    }
+    ::placeholder{
+      color:rgb(201, 208, 213);
+    }
+    button{
+    color:white;
+     background-color:rgb(33, 194, 33);
+     width:130px;
+     height:40px;
+     border-radius:5px;
+     font-size:25px;
+
+    }
+    button:hover{
+      background-color:red;
+      color:blueviolet;
+    }
+    button:active{
+      background-color:aqua;
+      color:burlywood;
+    }
+    img{
+      width:130px;
+      height:70px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="images/mount.jpg"></a>
+  </header>
+  
+  <fieldset style="margin-top:100px;margin-left:30%;margin-right:30%;height:400px;width:500px;border-radius:20px;text-align:center;">
+  <h1 style="text-align:center;color:whitesmoke;font-size:40px;">LOGIN</h1>
+  <br>
+  <input type="text" id="username" class="theform" required placeholder="Username or Email">
+  <br>
+  <input type="password" id="first" class="theform" required placeholder="Confirm Password">
+  <br>
+  <input type="password" id="second" style="margin-bottom:20px"; class="theform" required placeholder="Re-enter Password">
+  <br>
+  <button type="button" onclick="f() ">Login</button>
+</fieldset>
+  <script>
+    function f()
+    {
+      a=document.getElementById("first").value;
+      b=document.getElementById("second").value;
+      if (a==b && a.trim()!="" && b.trim()!="")
+        {
+          window.alert("Login Successful");
+          window.location.href="index.html";
+          return true;
+        }
+        else if (a.trim() === "" || b.trim() === "") {
+          window.alert("Please enter both passwords");
+          return false;
+        }
+
+      else{
+        window.alert("Passwords must be same");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
